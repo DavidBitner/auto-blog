@@ -1,0 +1,24 @@
+{
+  "name": "auto-blog",
+  "version": "1.0.0",
+  "description": "Auto blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidBitner/auto-blog.git"
+  },
+  "keywords": [
+    "auto",
+    "blog"
+  ],
+  "author": "David Bitner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidBitner/auto-blog/issues"
+  },
+  "homepage": "https://github.com/DavidBitner/auto-blog#readme",
+  "devDependencies": {}
+}

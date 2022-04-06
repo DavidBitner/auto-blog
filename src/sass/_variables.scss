@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;400;700;900&display=swap");
+
+// Colors
+$color-primary: #c263b4;
+$color-primary-light: #e2aada;
+$color-primary-dark: #6b2260;
+
+$color-gray-light-1: #f7f7f7;
+$color-gray-light-2: #eee;
+
+$color-gray-dark-1: #999;
+$color-gray-dark-2: #333;
+
+$color-white: #fff;
+$color-white-transparent: #ffffff16;
+$color-black: #000;
+
+// Font
+$font-primary: "Lexend Deca", sans-serif;
+
+// Shadows
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.06);
+
+// Grid
+$gap-small: 1rem;
+$gap-medium: 3rem;
+$gap-large: 5rem;
+
+$padding-size: 10rem 3rem;
+$padding-small: 5rem 3rem;
+$padding-big: 15rem 3rem;
+
+$border-radius: 0.5rem;

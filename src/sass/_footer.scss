@@ -1,0 +1,17 @@
+.footer {
+  background-color: $color-black;
+  color: $color-white;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: $gap-medium;
+  justify-content: center;
+  padding: 3rem;
+
+  &__link:hover {
+    text-shadow: 0 0 10px $color-primary;
+  }
+
+  &__text {
+    align-self: center;
+  }
+}

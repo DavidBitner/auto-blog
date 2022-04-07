@@ -7,20 +7,25 @@
     <title>Auto Blog</title>
 
     <link rel="stylesheet" href="src/css/style.css" />
-    <script src="src/js/script.js"></script>
+    <script defer type="module" src="src/js/script.js"></script>
   </head>
   <body>
     <div class="container">
-      <nav class="nav">
-        <div class="nav__icon"></div>
-        <div class="nav__title">Auto Blog</div>
-        <button class="nav__btn--add">Add</button>
-      </nav>
+      <header class="header">
+        <div class="header__title">
+          <div class="header__icon"></div>
+          <a href="index.html" class="header__title--text">Auto Blog</a>
+        </div>
+        <button class="header__btn btn">Add Post</button>
+      </header>
       <div class="blog"></div>
       <footer class="footer">
         <h3 class="footer__title">
           Project by
-          <a href="https://github.com/DavidBitner" class="footer__link"
+          <a
+            target="blank"
+            href="https://github.com/DavidBitner"
+            class="footer__link"
             >Bitner</a
           >
         </h3>

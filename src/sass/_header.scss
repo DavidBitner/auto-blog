@@ -1,0 +1,13 @@
+.header {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  background-color: $color-primary-dark;
+  padding: 1.5rem 3rem;
+  justify-content: space-between;
+
+  &__title {
+    font-size: 2rem;
+    display: grid;
+    color: $color-primary-light;
+  }
+}

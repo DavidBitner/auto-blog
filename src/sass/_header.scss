@@ -1,8 +1,10 @@
 .header {
+  position: sticky;
+  top: 0;
   display: grid;
   grid-template-columns: repeat(2, max-content);
   background-color: $color-primary-dark;
-  padding: 1.5rem 3rem;
+  padding: 1.5rem $gap;
   justify-content: space-between;
 
   &__title {

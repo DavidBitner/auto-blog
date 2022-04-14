@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap");
 
 // Colors
 $color-primary: #e2aada;
@@ -17,14 +18,11 @@ $color-black: #000;
 
 // Font
 $font-primary: "Lexend Deca", sans-serif;
+$font-blog: "Playfair Display", serif;
 
 // Grid
-$gap-small: 1rem;
-$gap-medium: 3rem;
-$gap-large: 5rem;
+$gap: 3rem;
 
-$padding-size: 10rem 3rem;
-$padding-small: 5rem 3rem;
-$padding-big: 15rem 3rem;
+$padding: 3rem;
 
 $border-radius: 0.5rem;

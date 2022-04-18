@@ -2,14 +2,31 @@
   position: sticky;
   top: 0;
   display: grid;
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: 3fr 1fr max-content;
   background-color: $color-primary-dark;
-  padding: 1.5rem $gap;
+  padding: 1.5rem $padding;
+  gap: $gap-small;
   justify-content: space-between;
+  z-index: 1;
 
   &__title {
     font-size: 2rem;
     display: grid;
     color: $color-primary-light;
+    display: grid;
+    align-content: space-around;
+    padding-top: 7px;
+  }
+
+  &__input {
+    width: 20rem;
+    font-size: 2rem;
+    transition: $transition;
+    justify-self: right;
+
+    &:focus {
+      outline: none;
+      box-shadow: $shadow;
+    }
   }
 }

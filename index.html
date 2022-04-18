@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Auto Blog</title>
+    <link rel="icon" href="src/img/logo.png">
     <link rel="stylesheet" href="src/css/style.css" />
     <script defer type="module" src="src/js/script.js"></script>
   </head>
@@ -12,9 +13,11 @@
     <div class="container">
       <header class="header">
         <h1 class="header__title">
-          <div class="header__icon"></div>
-          <a href="index.html" class="header__title--text">Auto Blog</a>
+          <a href="index.html" class="header__logo"
+            ><img src="src/img/logo.png" alt="Logo" />
+          </a>
         </h1>
+        <input class="header__input" type="text" placeholder="Post Theme" />
         <button class="header__btn btn">Add Post</button>
       </header>
       <div class="blog"></div>

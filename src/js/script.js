@@ -3,6 +3,7 @@ import create_ripple from "./rippleEffect.js";
 const btns = document.getElementsByClassName("btn");
 const btnAdd = document.querySelector(`.btn`);
 const blogContainer = document.querySelector(`.blog`);
+const input = document.querySelector(`.header__input`);
 
 const htmlLoad = `
     <h2 class="post__title">
@@ -90,7 +91,7 @@ async function fetchAuthor() {
 }
 
 async function getNews() {
-  const newsData = await fetchNews();
+  const newsData = await fetchNews(!input.value ? "tech" : input.value);
   const authorData = await fetchAuthor();
   const randomNumber = Math.floor(Math.random() * 50);
   const news = newsData.articles[randomNumber];
@@ -109,39 +110,43 @@ async function getNews() {
 
 async function addPost() {
   btnAdd.disabled = true;
-  const test = document.createElement("div");
-  test.classList.add("post");
-  test.classList.add("load");
-  test.innerHTML = htmlLoad;
-  blogContainer.insertBefore(test, blogContainer.children[0]);
+  try {
+    const post = document.createElement("div");
+    post.classList.add("post");
+    post.classList.add("load");
+    post.innerHTML = htmlLoad;
+    blogContainer.insertBefore(post, blogContainer.children[0]);
 
-  const postData = await getNews();
+    const postData = await getNews();
 
-  test.classList.remove("load");
-  test.innerHTML = `
-    <h2 class="post__title">
-      ${postData.title}
-    </h2>
-    <div class="author">
+    post.classList.remove("load");
+    post.innerHTML = `
+      <h2 class="post__title">
+        ${postData.title}
+      </h2>
+      <div class="author">
+        <img
+          src="${postData.authorPhoto}"
+          alt="authorImage"
+          class="author__img"
+        />
+        <h3 class="author__name">by ${postData.authorName}</h3>
+        <p class="author__location">${postData.location}</p>
+        <p class="post__date">${postData.date}</p>
+      </div>
       <img
-        src="${postData.authorPhoto}"
-        alt="authorImage"
-        class="author__img"
+        src="${postData.image}"
+        class="post__img"
+        alt="postImage"
       />
-      <h3 class="author__name">by ${postData.authorName}</h3>
-      <p class="author__location">${postData.location}</p>
-      <p class="post__date">${postData.date}</p>
-    </div>
-    <img
-      src="${postData.image}"
-      class="post__img"
-      alt="postImage"
-    />
-    <p class="post__body">
-      ${postData.body}
-    </p>
-    <div class="post__separator"></div>
-  `;
+      <p class="post__body">
+        ${postData.body}
+      </p>
+      <div class="post__separator"></div>
+    `;
+  } catch (error) {
+    alert(error);
+  }
   btnAdd.disabled = false;
 }
 
